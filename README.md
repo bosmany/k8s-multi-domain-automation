@@ -13,7 +13,7 @@ Welcome to the repository for setting up a multi-tenant Kubernetes cluster with 
 - Deployed backend services:
   - `app1-service`
   - `app2-service`
-  - 
+    
 - Set up an **Ingress resource** to route traffic based on subdomains.
 - Verified the setup using **browser** and **curl**.
 
