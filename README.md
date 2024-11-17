@@ -150,16 +150,6 @@ curl http://app1.891376932007.realhandsonlabs.net
 curl http://app2.891376932007.realhandsonlabs.net
 ```
 
----
-
-## Next Steps
-
-- Scale services dynamically using Horizontal Pod Autoscaler.
-- Integrate SSL/TLS certificates using Let’s Encrypt and Cert-Manager.
-- Set up monitoring for the cluster using Prometheus and Grafana.
-- Optimize the Ingress configuration for better performance and security.
-
----
 
 ## Repository Structure
 
