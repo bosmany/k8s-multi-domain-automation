@@ -6,3 +6,8 @@ Example:
 app1.test.example.com -> Backend service: app1-service
 app2.test.example.com -> Backend service: app2-service
 =================
+We'll configure the following:
+
+Host multiple domains or subdomains.
+Create separate backend services for each domain.
+Update the Ingress resource with rules for domain-specific routing.
