@@ -1,0 +1,30 @@
+ Install the NGINX Ingress Controller
+Deploy the NGINX Ingress Controller using the official Kubernetes YAML manifests.
+
+Step 1: Apply the Manifest
+Run the following command to deploy the NGINX Ingress Controller:
+
+===========
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+============
+#Step 2: Verify Installation
+Check the ingress-nginx namespace for running pods:
+
+kubectl get pods -n ingress-nginx
+Expected output:
+
+NAME                                       READY   STATUS    RESTARTS   AGE
+ingress-nginx-admission-create-xxxxxx     0/1     Completed 0          1m
+ingress-nginx-admission-patch-xxxxxx      0/1     Completed 0          1m
+ingress-nginx-controller-xxxxxx           1/1     Running   0          1m
+Step 3: Get the Ingress Controller Service
+Find the EXTERNAL-IP of the NGINX Ingress Controller:
+=============
+kubectl get svc -n ingress-nginx
+Expected output:
+
+NAME                                 TYPE           CLUSTER-IP      EXTERNAL-IP       PORT(S)                      AGE
+ingress-nginx-controller             LoadBalancer   10.100.0.1      18.x.x.x          80:31234/TCP,443:31235/TCP   1m
+ingress-nginx-controller-admission   ClusterIP      10.100.0.2      <none>            443/TCP                      1m
+The EXTERNAL-IP is the Load Balancer IP or DNS name. Note this, as it will be used for DNS configuration.
+=============
