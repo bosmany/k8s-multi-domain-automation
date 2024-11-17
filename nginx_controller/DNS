@@ -1,0 +1,13 @@
+Configure DNS
+Map test.example.com to the Ingress Controller’s EXTERNAL-IP:
+
+If you are using Route 53, create an A record pointing test.example.com to the Load Balancer's EXTERNAL-IP.
+Alternatively, update your local /etc/hosts file for testing:
+======================
+<EXTERNAL-IP> test.example.com
+Test the setup by accessing:
+
+=============================
+http://test.example.com
+You should see:
+Hello from NGINX Ingress!
