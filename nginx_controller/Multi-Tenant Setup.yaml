@@ -1,8 +1,3 @@
-# Now, we’ll update the Ingress rules to handle traffic for both subdomains:
-
-# app1.test.example.com -> app1-service
-# app2.test.example.com -> app2-service
-==========================
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -12,7 +7,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: app1.test.example.com
+  - host: app1.891376932007.realhandsonlabs.net
     http:
       paths:
       - path: /
@@ -22,7 +17,7 @@ spec:
             name: app1-service
             port:
               number: 80
-  - host: app2.test.example.com
+  - host: app2.891376932007.realhandsonlabs.net
     http:
       paths:
       - path: /
