@@ -1,0 +1,8 @@
+ Multi-Tenant Setup (Hosting Multiple Domains)
+Host multiple domains on the same cluster (e.g., app1.com and app2.com).
+Use specific Ingress rules for each domain.
+=================
+Example:
+app1.test.example.com -> Backend service: app1-service
+app2.test.example.com -> Backend service: app2-service
+=================
